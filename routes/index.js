@@ -3,6 +3,7 @@ const express = require('express');
 
 const router = express.Router();
 const db = firebase.firestore();
+
 router.get("/", (req, res) => {
   var posts = [];
   db.collection("blogposts").get().then(function(querySnapshot) {
